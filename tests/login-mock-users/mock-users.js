@@ -3,9 +3,9 @@ const _ = require("lodash");
 
 const UsersDB = [
   {
-    username: "Cthon98",
-    password: "hunter2", // User password
-    scopes: ["pangolins"] // Authorized actions
+    username: "alechp",
+    password: "123456", // User password
+    scopes: ["api/get/protected"] // Authorized actions
   },
   {
     username: "AzureDiamond",

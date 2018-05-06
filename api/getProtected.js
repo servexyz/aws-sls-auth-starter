@@ -5,7 +5,7 @@
  * @returns {Array.Object}
  */
 module.exports.handler = (event, context, callback) => {
-  console.log("getPangolins");
+  console.log("getProtected");
   console.log(event);
 
   const user = JSON.parse(event.requestContext.authorizer.user);

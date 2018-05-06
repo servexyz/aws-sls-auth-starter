@@ -1,25 +1,25 @@
 /**
-  * GET /cats
-  *
-  * Returns a collection of cats.
-  * @returns {Array.Object}
-  */
+ * GET /cats
+ *
+ * Returns a collection of cats.
+ * @returns {Array.Object}
+ */
 module.exports.handler = (event, context, callback) => {
-  console.log('getCats');
+  console.log("getPublic");
   const response = {
     statusCode: 200,
     headers: {
-      'Access-Control-Allow-Origin': '*', // Required for CORS support to work
+      "Access-Control-Allow-Origin": "*" // Required for CORS support to work
     },
     body: JSON.stringify({
       cats: [
         {
           id: 1,
-          name: 'Furball',
-          address: '2 Fur Lane',
-        },
-      ],
-    }),
+          name: "Furball",
+          address: "2 Fur Lane"
+        }
+      ]
+    })
   };
 
   callback(null, response);

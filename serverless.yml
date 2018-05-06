@@ -39,7 +39,7 @@ functions:
           method: get
           cors: true
           # authorizer: authorize # Cats are public
-  private:
+  protected:
     handler: api/getProtected.handler
     events:
       - http:

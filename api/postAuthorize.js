@@ -1,6 +1,6 @@
 const _ = require("lodash");
 const jwt = require("jsonwebtoken");
-const utils = require("./utils/buildIAMPolicy.js");
+const iam = require("../utils/buildIAMPolicy.js");
 
 // Returns a boolean whether or not a user is allowed to call a particular method
 // A user with scopes: ['pangolins'] can
@@ -38,7 +38,7 @@ module.exports.handler = (event, context, callback) => {
     const effect = isAllowed ? "Allow" : "Deny";
     const userId = user.username;
     const authorizerContext = { user: JSON.stringify(user) };
-    const policyDocument = utils.buildIAMPolicy(
+    const policyDocument = iam.buildIAMPolicy(
       userId,
       effect,
       event.methodArn,
