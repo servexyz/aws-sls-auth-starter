@@ -1,4 +1,5 @@
-functions/
-lib/
+tests/
+utils/
+api/
 coverage/
 .serverless/
