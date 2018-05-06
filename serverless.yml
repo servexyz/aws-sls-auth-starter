@@ -48,9 +48,9 @@ functions:
           cors: true
           authorizer: authorize # Pangolins are protected
   testLogin: #no authorizer required, accepts username/password instead of jwt
-    handler: tests/login-mock-users/login.handler 
+    handler: api/mock/login-users/login.handler 
     events:
       - http:
-          path: api/test/post/login
+          path: api/mock/post/login
           method: post
           cors: true 
