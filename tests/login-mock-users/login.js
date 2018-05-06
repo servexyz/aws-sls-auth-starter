@@ -1,5 +1,5 @@
 const jwt = require("jsonwebtoken");
-const users = require("../lib/users");
+const users = require("./mock-users");
 
 const JWT_EXPIRATION_TIME = "5m";
 

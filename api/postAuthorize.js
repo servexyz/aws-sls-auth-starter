@@ -1,6 +1,6 @@
 const _ = require("lodash");
 const jwt = require("jsonwebtoken");
-const utils = require("../lib/utils");
+const utils = require("./utils/buildIAMPolicy.js");
 
 // Returns a boolean whether or not a user is allowed to call a particular method
 // A user with scopes: ['pangolins'] can
