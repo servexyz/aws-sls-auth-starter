@@ -35,15 +35,15 @@
 
 > You can test locally thanks to serverless-offline
 
-**Automatically with Ava**
+#### Automatically with Ava
 
 ```bash
 npm start
 ```
 
-**Manually with Postman**
+#### Manually with Postman
 
-1.  Start Server
+1.  **Start Server**
 
 ```bash
 npm run slsoff
@@ -51,11 +51,12 @@ npm run slsoff
 
 ![Serverless Offline Start](screenshots/slsoff.png)
 
-2.  Import Postman Collection
-    a. Open Postman
-    b. CMD+O (Open)
-    c. Drag-and-drop `slsauth.postman_collection.json` into Postman modal
+2.  **Import [Postman Collection](./SLSAuth.postman_collection.json)**
 
-3.  Run tests
+![Import postman collection](screenshots/postman_open.png)
 
-![Postman Protected Test](screenshots/postman.png)
+3.  **Run tests**
+
+![Postman Authentication](screenshots/postman_login.png)
+
+![Postman Authorization](screenshots/postman_protected.png)
