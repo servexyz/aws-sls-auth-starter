@@ -19,9 +19,8 @@ module.exports.handler = (event, context, callback) => {
     body: JSON.stringify({
       private: [
         {
-          id: 2,
-          name: "Pengu",
-          address: "123 Carapace Drive"
+          id: user,
+          message: "You've reached the protected route"
         }
       ]
     })
