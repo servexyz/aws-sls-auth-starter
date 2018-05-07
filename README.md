@@ -1,7 +1,6 @@
 # AWS SLS Auth Starter
 
-* **Shoutout**: Forked from [@yosriad/serverless-auth](https://github.com/yosriady/serverless-auth)
-* **Purpose**: This is a serverless authorization example using JSON Web Tokens (JWTs)
+**Shoutout**: Forked from [@yosriad/serverless-auth](https://github.com/yosriady/serverless-auth)
 
 ---
 
