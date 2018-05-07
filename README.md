@@ -2,6 +2,18 @@
 
 **Shoutout**: Forked from [@yosriad/serverless-auth](https://github.com/yosriady/serverless-auth)
 
+<!-- TOC -->
+
+* [AWS SLS Auth Starter](#aws-sls-auth-starter)
+  * [Routes](#routes)
+  * [Sequence](#sequence)
+  * [Testing Locally](#testing-locally)
+    * [Automatically with Ava](#automatically-with-ava)
+    * [Manually with Postman](#manually-with-postman)
+  * [Eslint](#eslint)
+
+<!-- /TOC -->
+
 ---
 
 ### Routes
@@ -59,3 +71,17 @@ npm run slsoff
 ![Postman Authentication](screenshots/postman_login.png)
 
 ![Postman Authorization](screenshots/postman_protected.png)
+
+---
+
+### Eslint
+
+> Currently disabled
+
+**To enable eslint, remove these from [.eslintignore](./eslintignore)**
+
+```
+tests/
+utils/
+api/
+```
