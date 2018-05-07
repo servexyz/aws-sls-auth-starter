@@ -1,66 +1,36 @@
-# Serverless Auth
+# AWS SLS Auth Starter
 
-> Pangolins are a protected species!
+This is a serverless authorization example using JSON Web Tokens (JWTs.). Forked from [@yosriad/serverless-auth](https://github.com/yosriady/serverless-auth)
 
-![Pangolins are protected species!](http://i.imgur.com/ReO39.jpg)
+### Routes
 
-This is a serverless authorization example using JSON Web Tokens (JWTs.)
-It has three endpoints:
+| Method | Endpoint              | Users with access | Header          | Body |
+| :----- | :-------------------- | :---------------- | :-------------- | :--- |
+| GET    | `api/get/public`      | All               | No              | No   |
+| POST   | `api/mock/post/login` | All               | No              | Yes  |
+| GET    | `api/get/protected`   | `alechp`          | `Authorization` | No   |
 
-- `GET /cats` is a public endpoint anyone can access.
-- `GET /pangolins` is a private endpoint, protected by an AWS Custom Authorizer.
-- `POST /sessions` is a login endpoint. Pass a valid username and password in a JSON request body to get a JWT (see `/lib/users.js` for valid combinations.) For example:
+**Login Body**
 
-```
+```json
 {
-	"username": "Cthon98",
-	"password": "hunter2"
+  "username": "alechp",
+  "password": "123456"
 }
 ```
 
-In order to pass the *authentication* check, you will need to supply a valid JWT in your `Authorization` request header when making calls to a protected endpoint.
+### Sequence
 
-In order to pass the *authorization* check, you will need a JWT belonging to a user with valid permissions. For this example, the user `Cthon98` is authorized to access `GET /pangolins`; `AzureDiamond` is not.
+1.  Login to get JWT (POST `api/mock/post/login`)
 
-## Setup
+    > In order to pass the _authentication_ check, you will need to supply a valid JWT in your `Authorization` request header when making calls to a protected endpoint.
 
-### Prerequisites
+2.  Access authorized route (GET `api/get/protected`)
+    > In order to pass the _authorization_ check, you will need a JWT belonging to a user with valid permissions. For this example, the user `alechp` is authorized to access `api/get/protected`. Unprivileged is not.
 
-- Node.js & NPM
-- Yarn
-- [The Serverless Framework](https://serverless.com/framework/)
+### Testing Locally
 
-### Install dependencies
+> You can test locally thanks to serverless-offline
 
-```
-yarn
-```
-
-### Running Tests
-
-```
-yarn test
-```
-
-### Get Test coverage
-
-```
-yarn test:coverage
-```
-
-### Lint
-
-```
-yarn eslint
-```
-
-### Running locally
-```
-serverless offline start
-```
-
-### Deploy
-
-```
-serverless deploy
-```
+`sls offline start`
+![Serverless Offline Start](slsoff.png)
