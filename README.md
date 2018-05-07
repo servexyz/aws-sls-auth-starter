@@ -36,24 +36,26 @@
 > You can test locally thanks to serverless-offline
 
 **Automatically with Ava**
-`npm start`
 
-**Manually**
-`sls offline start`
-![Serverless Offline Start](slsoff.png)
-
-##### Common Error
-
-**Remember to start your server**
-
+```bash
+npm start
 ```
-  RequestError (GotError) {
-    code: 'ECONNREFUSED',
-    host: 'localhost:3000',
-    hostname: 'localhost',
-    method: 'POST',
-    path: '/api/mock/post/login',
-    protocol: 'http:',
-    url: 'http://localhost:3000/api/mock/post/login',
-    message: 'connect ECONNREFUSED 127.0.0.1:3000',
+
+**Manually with Postman**
+
+1.  Start Server
+
+```bash
+npm run slsoff
 ```
+
+![Serverless Offline Start](screenshots/slsoff.png)
+
+2.  Import Postman Collection
+    a. Open Postman
+    b. CMD+O (Open)
+    c. Drag-and-drop `slsauth.postman_collection.json` into Postman modal
+
+3.  Run tests
+
+![Postman Protected Test](screenshots/postman.png)

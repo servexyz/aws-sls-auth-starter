@@ -1,0 +1,93 @@
+{
+  "info": {
+    "_postman_id": "4386c758-8704-4e8c-9849-bbb43f861143",
+    "name": "SLSAuth",
+    "description": "AWS SLS Auth Repo",
+    "schema":
+      "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "/public :: Local",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {},
+        "url": {
+          "raw": "{{uri_local}}/get/public",
+          "host": ["{{uri_local}}"],
+          "path": ["get", "public"]
+        },
+        "description": "{{uri_local}}/get/public"
+      },
+      "response": []
+    },
+    {
+      "name": "/protected :: Local",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value":
+              "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJuYW1lIjoiYWxlY2hwIiwic2NvcGVzIjpbImFwaS9nZXQvcHJvdGVjdGVkIl19LCJpYXQiOjE1MjU3MDk3NTgsImV4cCI6MTUyNTcxMDA1OH0.Cy06OsIDDk-2Sfi3FXZ5CYCrLxGsO8x3PSLHPk7LeII"
+          }
+        ],
+        "body": {},
+        "url": {
+          "raw": "{{uri_local}}/get/protected",
+          "host": ["{{uri_local}}"],
+          "path": ["get", "protected"]
+        },
+        "description": "{{uri_local}}/get/protected"
+      },
+      "response": []
+    },
+    {
+      "name": "/login :: Local",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "username",
+            "value": "alechp",
+            "disabled": true
+          },
+          {
+            "key": "password",
+            "value": "123456",
+            "disabled": true
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"username\": \"alechp\",\n\t\"password\": \"123456\"\n}"
+        },
+        "url": {
+          "raw": "{{uri_local}}/mock/post/login",
+          "host": ["{{uri_local}}"],
+          "path": ["mock", "post", "login"]
+        }
+      },
+      "response": []
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "id": "82b1ce61-b2c2-442c-90d9-5298d0939e9d",
+        "type": "text/javascript",
+        "exec": [""]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "id": "ee3f41ca-98bb-4659-982c-bbe174bb9354",
+        "type": "text/javascript",
+        "exec": [""]
+      }
+    }
+  ]
+}
