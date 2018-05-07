@@ -5,8 +5,8 @@
 <!-- TOC -->
 
 * [AWS SLS Auth Starter](#aws-sls-auth-starter)
-  * [Routes](#routes)
-  * [Sequence](#sequence)
+  * [Endpoints](#endpoints)
+    * [Accessing `api/get/protected` Endpoint](#accessing-apigetprotected-endpoint)
   * [Testing Locally](#testing-locally)
     * [Automatically with Ava](#automatically-with-ava)
     * [Manually with Postman](#manually-with-postman)
@@ -16,7 +16,7 @@
 
 ---
 
-### Routes
+### Endpoints
 
 | Method | Endpoint              | Users with access | Header          | Body |
 | :----- | :-------------------- | :---------------- | :-------------- | :--- |
@@ -33,7 +33,7 @@
 }
 ```
 
-### Sequence
+#### Accessing `api/get/protected` Endpoint
 
 1.  Login to get JWT (POST `api/mock/post/login`)
 
