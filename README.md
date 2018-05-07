@@ -35,5 +35,25 @@
 
 > You can test locally thanks to serverless-offline
 
+**Automatically with Ava**
+`npm start`
+
+**Manually**
 `sls offline start`
 ![Serverless Offline Start](slsoff.png)
+
+##### Common Error
+
+**Remember to start your server**
+
+```
+  RequestError (GotError) {
+    code: 'ECONNREFUSED',
+    host: 'localhost:3000',
+    hostname: 'localhost',
+    method: 'POST',
+    path: '/api/mock/post/login',
+    protocol: 'http:',
+    url: 'http://localhost:3000/api/mock/post/login',
+    message: 'connect ECONNREFUSED 127.0.0.1:3000',
+```

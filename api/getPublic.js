@@ -6,11 +6,7 @@ module.exports.handler = (event, context, callback) => {
       "Access-Control-Allow-Origin": "*" // Required for CORS support to work
     },
     body: JSON.stringify({
-      publicRoute: [
-        {
-          message: "Welcome! You are now a public"
-        }
-      ]
+      message: "Welcome! You are now a public"
     })
   };
 
