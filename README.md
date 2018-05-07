@@ -2,6 +2,8 @@
 
 **Shoutout**: Forked from [@yosriad/serverless-auth](https://github.com/yosriady/serverless-auth)
 
+---
+
 <!-- TOC -->
 
 * [AWS SLS Auth Starter](#aws-sls-auth-starter)
