@@ -1,9 +1,3 @@
-/**
- * GET /cats
- *
- * Returns a collection of cats.
- * @returns {Array.Object}
- */
 module.exports.handler = (event, context, callback) => {
   console.log("getPublic");
   const response = {

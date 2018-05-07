@@ -2,9 +2,6 @@ const _ = require("lodash");
 const jwt = require("jsonwebtoken");
 const iam = require("../utils/buildIAMPolicy.js");
 
-// Returns a boolean whether or not a user is allowed to call a particular method
-// A user with scopes: ['pangolins'] can
-// call 'arn:aws:execute-api:us-east-1::random-api-id/dev/GET/pangolins'
 const authorizeUser = (userScopes, methodArn) => {
   console.log(`authorizeUser ${JSON.stringify(userScopes)} ${methodArn}`);
   const hasValidScope = _.some(userScopes, scope =>
