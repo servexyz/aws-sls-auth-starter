@@ -64,7 +64,7 @@ npm run slsoff
 
 ![Serverless Offline Start](screenshots/slsoff.png)
 
-2.  **Import [Postman Collection](./SLSAuth.postman_collection.json)**
+2.  **Import [Postman Collection](./slsauth.postman_collection.json)**
 
 ![Import postman collection](screenshots/postman_open.png)
 
