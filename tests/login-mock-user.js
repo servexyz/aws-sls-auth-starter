@@ -1,6 +1,5 @@
 import { serial as test } from "ava";
 import chalk from "chalk";
-import fs from "fs";
 import got from "got";
 
 const apiLocal = "http://localhost:3000/api";
