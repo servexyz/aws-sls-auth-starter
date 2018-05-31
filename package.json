@@ -6,8 +6,8 @@
   },
   "license": "MIT",
   "scripts": {
-    "start": "concurrently \"npm run slsoff\" \"npm run test\"",
-    "dev": "npm run slsoff",
+    "start": "npm run slsoff",
+    "dev": "concurrently \"npm run slsoff\" \"npm run test\"",
     "test": "ava",
     "slsoff": "serverless offline start"
   },
