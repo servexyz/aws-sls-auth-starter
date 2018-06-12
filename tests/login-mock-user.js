@@ -1,8 +1,7 @@
 import { serial as test } from "ava";
 import chalk from "chalk";
 import got from "got";
-// import { authenticate, isAuthorized } from "aws-sls-auther";
-const { authenticate, isAuthorized } = require("aws-sls-auther");
+import { authenticate, isAuthorized } from "aws-sls-auther";
 
 const apiLocal = "http://localhost:3000/api";
 var token;
