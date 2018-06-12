@@ -13,10 +13,11 @@
   },
   "devDependencies": {
     "ava": "^0.25.0",
+    "aws-sls-auther": "^1.2.3",
     "chalk": "^2.4.1",
     "concurrently": "^3.5.1",
     "lambda-tester": "^3.0.2",
-    "serverless-offline": "^3.15.0"
+    "serverless-offline": "^3.25.4"
   },
   "dependencies": {
     "got": "^8.3.1",
@@ -25,7 +26,11 @@
     "remove": "^0.1.5"
   },
   "ava": {
-    "files": ["tests/**/*.js"],
-    "source": ["**.*.js"]
+    "files": [
+      "tests/**/*.js"
+    ],
+    "source": [
+      "**.*.js"
+    ]
   }
 }

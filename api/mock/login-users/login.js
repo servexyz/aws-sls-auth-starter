@@ -4,8 +4,6 @@ const users = require("./mock-users");
 const JWT_EXPIRATION_TIME = "5m";
 
 /**
- * POST /sessions
- *
  * Returns a JWT, given a username and password.
  * @method login
  * @param {String} event.body.username
