@@ -17,6 +17,7 @@
     "chalk": "^2.4.1",
     "concurrently": "^3.5.1",
     "lambda-tester": "^3.0.2",
+    "npm-starter-sample-module": "0.0.2",
     "serverless-offline": "^3.25.4"
   },
   "dependencies": {
