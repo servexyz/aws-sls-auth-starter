@@ -1,4 +1,4 @@
-![logo](./docs/logo/PRStar.svg)
+# AWS SLS Auth Starter
 
 > WHAT: AWS Lambda, Serverless and AWS Cognito
 > 
