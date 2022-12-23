@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "got": "^8.3.2",
-    "jsonwebtoken": "^8.5.1",
+    "jsonwebtoken": "^9.0.0",
     "lodash": "^4.17.12",
     "remove": "^0.1.5"
   },
